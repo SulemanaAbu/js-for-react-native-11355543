@@ -13,8 +13,22 @@ function processArray(arr) {
     });
 }
 
+// Function to format an array of strings based on corresponding numbers
+function formatArrayStrings(strings, numbers) {
+    return strings.map((str, index) => {
+        if (numbers[index] % 2 === 0) {
+            // Capitalize the entire string
+            return str.toUpperCase();
+        } else {
+            // Convert the string to lowercase
+            return str.toLowerCase();
+        }
+    });
+}
+
 // Example usage
-let inputArray = [1, 2, 3, 4, 5];
-let processedArray = processArray(inputArray);
-console.log(processedArray);  // Output: [3, 4, 9, 16, 15]
+let inputStrings = ["Sulemana", "Nii", "JavaScript", "React"];
+let inputNumbers = [1, 2, 3, 4];
+let formattedStrings = formatArrayStrings(inputStrings, processArray(inputNumbers));
+console.log(formattedStrings);  // Output: ['hello', 'WORLD', 'javascript', 'NODE.JS']
 
