@@ -32,3 +32,4 @@ let inputNumbers = [1, 2, 3, 4];
 let formattedStrings = formatArrayStrings(inputStrings, processArray(inputNumbers));
 console.log(formattedStrings);  // Output: ['hello', 'WORLD', 'javascript', 'NODE.JS']
 
+module.exports = { processArray, formatArrayStrings };
